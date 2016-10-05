@@ -213,6 +213,18 @@
 				<version>3.3</version>
 			</plugin>
 			<plugin>
+                    <groupId>com.github.github</groupId>
+                    <artifactId>site-maven-plugin</artifactId>
+                    <version>0.10</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.eclipse.mylyn.github</groupId>
+                            <artifactId>org.eclipse.egit.github.core</artifactId>
+                            <version>2.1.5</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.12</version>
@@ -384,6 +396,8 @@
 				<artifactId>serenity-maven-plugin</artifactId>
 				<version>${serenity.version}</version>
 			</plugin>
+			
+			
 		</plugins>
 	</reporting>
 	<distributionManagement>
@@ -395,6 +409,7 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
+		
 		<site>
 			<id>github-project-site</id>
 			<url>gitsite:git@github.com/devopsfolks/podam.git</url>
